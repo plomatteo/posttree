@@ -1,0 +1,26 @@
+#NowPl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px ;
+}
+
+.card{
+    background-color: rgb(58, 226, 226);
+    border-style: solid;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:0.5em;
+    width:max-content;
+    height: max-content;  
+
+}
+
+img{
+    width: max-content;
+    height: max-content;
+}
