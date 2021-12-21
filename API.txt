@@ -1,3 +1,10 @@
 chiave API: 0330724af874d28c62a4c079ed817bce
 esempio richiesta API: https://api.themoviedb.org/3/movie/550?api_key=0330724af874d28c62a4c079ed817bce
 api read Access Token:eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMzMwNzI0YWY4NzRkMjhjNjJhNGMwNzllZDgxN2JjZSIsInN1YiI6IjYxYzFiNTYwZGI0ZWQ2MDA2MzI1ZDMwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.i3ghXxJ6V3s5F96MiukoKUdQxEvfjGIQnNpJNbzseFY
+
+
+AUGUSTO: top rated https://developers.themoviedb.org/3/movies/get-top-rated-movies
+EDMONDO: lates https://developers.themoviedb.org/3/movies/get-latest-movie
+GIANFRANCO: popular https://developers.themoviedb.org/3/movies/get-popular-movies
+FEDERICO: Get Now Playing https://developers.themoviedb.org/3/movies/get-now-playing
+MATTEO: upcoming https://developers.themoviedb.org/3/movies/get-upcoming
