@@ -28,9 +28,12 @@ body{
     color: #fff;
    }
    /* LOGO */
-   .logo {
-    font-size: 32px;
+   .logo>img {
+      border-radius: 50%;
    }
+   .logo>img:hover {
+    filter: hue-rotate(100deg);
+ }
    /* NAVBAR MENU */
    .menu {
     display: flex;
@@ -81,9 +84,7 @@ body{
 @media (min-width: 767px) and (max-width: 991px) {
 
    /*Inizio Header*/
-  .logo{
-    display: none;
-  }
+
   .navbar{
     height:150px;
   }
