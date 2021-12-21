@@ -66,7 +66,7 @@ body{
     display: none;
     font-size: 45px;
     user-select: none;
-    color: white;
+    color: #502F4C;
    }
 /*****************FINE HEADER********************/
 
@@ -114,7 +114,7 @@ body{
     opacity: 1;
   }
   input[type=checkbox]:checked ~ .hamburger {
-    color: black;
+    color: white;
   }
   .hamburger {
    display: block;
