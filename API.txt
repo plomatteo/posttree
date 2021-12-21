@@ -1,0 +1,3 @@
+chiave API: 0330724af874d28c62a4c079ed817bce
+esempio richiesta API: https://api.themoviedb.org/3/movie/550?api_key=0330724af874d28c62a4c079ed817bce
+api read Access Token:eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMzMwNzI0YWY4NzRkMjhjNjJhNGMwNzllZDgxN2JjZSIsInN1YiI6IjYxYzFiNTYwZGI0ZWQ2MDA2MzI1ZDMwNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.i3ghXxJ6V3s5F96MiukoKUdQxEvfjGIQnNpJNbzseFY
