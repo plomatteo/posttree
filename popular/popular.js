@@ -10,3 +10,26 @@ fetch(url).then(function(response) {
     console.log("Booo");
   });
   
+  function printList(list) {
+    var str = "";
+
+    list.forEach(v => {
+        str += "<tr>"
+        str += "<td><a>" + v.title + "</a></td>"
+        str += "<td>" + v.popularity + "</td>"
+        str += "</td>"
+    });
+    document.getElementById('topRatedMovies').innerHTML = str;
+}
+
+printList(e);
+
+function printFirst(top) {
+    var baseUrl = 'https://image.tmdb.org/t/p/w500';
+    document.getElementById('card-poster').src = baseUrl + top.poster_path;
+    document.getElementById('card-title').innerHTML = top.title;
+}
+
+printFirst(e[0]);
+
+});
