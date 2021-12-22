@@ -43,7 +43,7 @@ getPopular(popularity).then(function (data) {
     function printFirst(top) {
         var baseUrl = 'https://image.tmdb.org/t/p/w500';
         document.getElementById('card-poster').src = baseUrl + top.poster_path;
-        document.getElementById('card-title').innerHTML = "più popolare: "+ top.title;
+        document.getElementById('card-title').innerHTML = "Best popular: "+ top.title;
     }
 
     printFirst(e[0]);
