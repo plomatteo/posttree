@@ -29,10 +29,10 @@ getPopular(popularity).then(function (data) {
     function printList(list) {
         var str = "";
 
-        list.forEach(v => {
+        list.forEach(p => {
             str += "<tr>"
-            str += "<td><a>" + v.title + "</a></td>"
-            str += "<td>" + v.popularity + "</td>"
+            str += "<td><a>" + p.title + "</a></td>"
+            str += "<td>" + p.popularity + "</td>"
             str += "</td>"
         });
         document.getElementById('popular').innerHTML = str;
