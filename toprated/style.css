@@ -1,3 +1,7 @@
+body {
+    background-color: #708090;
+}
+
 .main-wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -10,13 +14,38 @@ h1 {
     margin-bottom: 50px;
 }
 
+.list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
     text-align: center;
     font-family: arial;
+
+    position: relative;
+    transition: opacity 0.8s, transform 0.2s;
   }
+
+.card:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+.card:hover + .hide-vote {
+    visibility: visible
+}
+
+.hide-vote {
+    visibility: hidden;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
   table, th, td {
       border: 2px solid black;
