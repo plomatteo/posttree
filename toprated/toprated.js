@@ -23,34 +23,41 @@ function httpGetPost(url) {
 
 httpGetPost(urlTopRated).then(function (data) {
     var e = data.results;
+    var topFive = e.slice(0,5);
+    var topTen = e.slice(5,10);
+    var topFifteen = e.slice(10,15);
+    var topTwenty = e.slice(15,20);
     console.log(e);
 
+    var baseUrl = 'https://image.tmdb.org/t/p/w300';
 
-    function printList(list) {
-        var str = "";
+    document.getElementById('top-five').innerHTML = topFive.map(movie =>
+        `<div class="card">
+            <img src="${baseUrl + movie.poster_path}"></img>  
+            <p class="hide-vote">Average rating:${movie.vote_average}</p>
+        </div>`
+    ).join('')
 
-        list.forEach(v => {
-            str += "<tr>"
-            str += "<td><a>" + v.title + "</a></td>"
-            str += "<td>" + v.vote_average + "</td>"
-            str += "</td>"
-        });
-        document.getElementById('topRatedMovies').innerHTML = str;
-    }
+    document.getElementById('top-ten').innerHTML = topTen.map(movie =>
+        `<div class="card">
+            <img src="${baseUrl + movie.poster_path}"></img>  
+            <div class="hide-vote">Average rating:${movie.vote_average}</div>
+        </div>`
+    ).join('')
 
-    printList(e);
+    document.getElementById('top-fifteen').innerHTML = topFifteen.map(movie =>
+        `<div class="card">
+            <img src="${baseUrl + movie.poster_path}"></img>  
+            <div class="hide-vote">Average rating:${movie.vote_average}</div>
+        </div>`
+    ).join('')
 
-    function printFirst(top) {
-        var baseUrl = 'https://image.tmdb.org/t/p/w500';
-        document.getElementById('card-poster').src = baseUrl + top.poster_path;
-        document.getElementById('card-title').innerHTML = top.title;
-    }
-
-    printFirst(e[0]);
-
+    document.getElementById('top-twenty').innerHTML = topTwenty.map(movie =>
+        `<div class="card">
+            <img src="${baseUrl + movie.poster_path}"></img>  
+            <div class="hide-vote">Average rating:${movie.vote_average}</div>
+        </div>`
+    ).join('')
 });
-
-
-
 
 
