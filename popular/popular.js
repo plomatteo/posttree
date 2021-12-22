@@ -8,7 +8,7 @@ function getPopular(url) {
             let get;
             if (httpReq.readyState == 4) {
                 if (httpReq.status == 200) {
-                    post = JSON.parse(httpReq.responseText);
+                    get = JSON.parse(httpReq.responseText);
                     resolve(get);
                 }
                 else {
