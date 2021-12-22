@@ -19,7 +19,7 @@ fetch(url).then(function(response) {
         str += "<td>" + v.popularity + "</td>"
         str += "</td>"
     });
-    document.getElementById('topRatedMovies').innerHTML = str;
+    document.getElementById('popular').innerHTML = str;
 }
 
 printList(e);
