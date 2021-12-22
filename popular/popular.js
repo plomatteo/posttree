@@ -6,15 +6,15 @@ function httpGetPost(url) {
         var httpReq = new XMLHttpRequest();
         httpReq.onreadystatechange = function () {
             let post;
-            if (httpReq.readyState == 4 && httpReq.status == 200) {
-               
+            if (httpReq.readyState == 4) {
+                if (httpReq.status == 200) {
                     post = JSON.parse(httpReq.responseText);
                     resolve(post);
+                }
+                else {
+                    reject(new Error(httpReq.statusText))
+                }
             }
-            else {
-                reject(new Error(httpReq.statusText))
-            }
-            
         }
         httpReq.open("GET", url, true)
         httpReq.send();
