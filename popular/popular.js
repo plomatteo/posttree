@@ -5,11 +5,11 @@ function getPopular(url) {
     return new Promise(function (resolve, reject) {
         var httpReq = new XMLHttpRequest();
         httpReq.onreadystatechange = function () {
-            let post;
+            let get;
             if (httpReq.readyState == 4) {
                 if (httpReq.status == 200) {
                     post = JSON.parse(httpReq.responseText);
-                    resolve(post);
+                    resolve(get);
                 }
                 else {
                     reject(new Error(httpReq.statusText))
