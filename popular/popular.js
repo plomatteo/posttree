@@ -1,7 +1,7 @@
 const key = '0330724af874d28c62a4c079ed817bce';
 const popularity = 'https://api.themoviedb.org/3/movie/popular?api_key=0330724af874d28c62a4c079ed817bce&language=en-US&page=1';
 
-function httpGetPost(url) {
+function getPopular(url) {
     return new Promise(function (resolve, reject) {
         var httpReq = new XMLHttpRequest();
         httpReq.onreadystatechange = function () {
@@ -21,7 +21,7 @@ function httpGetPost(url) {
     })
 }
 
-httpGetPost(popularity).then(function (data) {
+getPopular(popularity).then(function (data) {
     var e = data.results;
     console.log(e);
 
