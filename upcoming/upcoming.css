@@ -1,0 +1,30 @@
+#box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin: 50px;
+}
+
+.cards{
+    border: black solid 3px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #502F4C;
+    color: white;
+    width: 300px;
+    margin-bottom: 2%;
+    padding: 1%;
+
+}
+
+.poster{
+    width: 200px;
+}
+
+h4{
+    display: flex;
+    margin:15px;
+}
