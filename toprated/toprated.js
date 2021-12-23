@@ -1,11 +1,11 @@
 const key = '0330724af874d28c62a4c079ed817bce';
-const urlTopRated = 'https://api.themoviedb.org/3/movie/top_rated?api_key=0330724af874d28c62a4c079ed817bce&language=en-US&page=1';
+const urlTopRated = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`;
 
 function httpGetPost(url) {
     return new Promise(function (resolve, reject) {
         var httpReq = new XMLHttpRequest();
         httpReq.onreadystatechange = function () {
-            let post;
+            var post;
             if (httpReq.readyState == 4) {
                 if (httpReq.status == 200) {
                     post = JSON.parse(httpReq.responseText);
@@ -31,31 +31,39 @@ httpGetPost(urlTopRated).then(function (data) {
 
     var baseUrl = 'https://image.tmdb.org/t/p/w300';
 
-    document.getElementById('top-five').innerHTML = topFive.map(movie =>
+    document.getElementById('top-five').innerHTML = topFive.map((movie, i) =>
         `<div class="card">
             <img src="${baseUrl + movie.poster_path}"></img>  
-            <p class="hide-vote">Average rating:${movie.vote_average}</p>
+            <div class="overlay">
+                <div class="overlaytext">${i+1}<br>Average rating:${movie.vote_average}</div>
+            </div>
         </div>`
     ).join('')
 
-    document.getElementById('top-ten').innerHTML = topTen.map(movie =>
+    document.getElementById('top-ten').innerHTML = topTen.map((movie, i) =>
         `<div class="card">
             <img src="${baseUrl + movie.poster_path}"></img>  
-            <div class="hide-vote">Average rating:${movie.vote_average}</div>
+            <div class="overlay">
+                <div class="overlaytext">${i+1}<br>Average rating:${movie.vote_average}</div>
+            </div>
         </div>`
     ).join('')
 
-    document.getElementById('top-fifteen').innerHTML = topFifteen.map(movie =>
+    document.getElementById('top-fifteen').innerHTML = topFifteen.map((movie, i) =>
         `<div class="card">
             <img src="${baseUrl + movie.poster_path}"></img>  
-            <div class="hide-vote">Average rating:${movie.vote_average}</div>
+            <div class="overlay">
+                <div class="overlaytext">${i+1}<br>Average rating:${movie.vote_average}</div>
+            </div>
         </div>`
     ).join('')
 
-    document.getElementById('top-twenty').innerHTML = topTwenty.map(movie =>
+    document.getElementById('top-twenty').innerHTML = topTwenty.map((movie, i) =>
         `<div class="card">
             <img src="${baseUrl + movie.poster_path}"></img>  
-            <div class="hide-vote">Average rating:${movie.vote_average}</div>
+            <div class="overlay">
+                <div class="overlaytext">${i+1}<br>Average rating:${movie.vote_average}</div>
+            </div>
         </div>`
     ).join('')
 });
