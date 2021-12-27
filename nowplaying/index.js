@@ -40,5 +40,9 @@ nowPlayng(urlNowPlayng).then(function (data) {
         filmData += `</div>`
     })
     document.getElementById("NowPl").innerHTML = filmData
-})
+}).catch(function(){ document.write('<h1 style="color:red; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">Errore di caricamento della pagina, riprova più tardi.<br>Grazie</h1>')})
+
+
+
+
 
