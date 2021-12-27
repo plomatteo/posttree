@@ -11,15 +11,16 @@ function nowPlayng(url) {
 
         httpReq.send();
 
-        httpReq.onload = function () {
+        httpReq.onreadystatechange = function () {
             var data;
             if (httpReq.readyState == 4) {
                 if (httpReq.status == 200) {
                     data = JSON.parse(httpReq.responseText);
                     resolve(data);
                 }
+                else { reject(new Error(httpReq.statusText)) }
             }
-            else (reject(httpReq.statusText))
+
         }
     })
 }
@@ -28,16 +29,16 @@ nowPlayng(urlNowPlayng).then(function (data) {
     console.log(data);
     var filmData = "";
 
+
+
+
+
     data.results.map((film) => {
-        filmData += "<div class='card'>"
-        filmData += "<h1>" + film.title + "</h1>"
+        filmData += `<div class='card'>`
         filmData += `<img src="https://image.tmdb.org/t/p/w400/${film.poster_path}" alt="poster">`
-        filmData += "</div>"
+        filmData += `<div class="hide-vote">Average rating: ${film.vote_average}</div>`
+        filmData += `</div>`
     })
     document.getElementById("NowPl").innerHTML = filmData
 })
-
-
-
-
 

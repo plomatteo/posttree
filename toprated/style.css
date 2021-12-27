@@ -27,6 +27,7 @@ h1 {
 
     position: relative;
     transition: opacity 0.8s, transform 0.2s;
+    
   }
 
 .card:hover {
@@ -35,7 +36,8 @@ h1 {
 }
 
 .card:hover + .hide-vote {
-    visibility: visible
+    visibility: visible;
+    
 }
 
 .hide-vote {
