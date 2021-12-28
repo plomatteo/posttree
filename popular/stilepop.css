@@ -1,0 +1,58 @@
+body {
+    background-color: #708090;
+}
+
+.error{
+    color: red;
+}
+
+h1 {
+    margin: 20px auto 50px;
+    width: max-content;
+}
+
+
+#Pop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px 0px;
+    
+    
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba (0,0,0,0.2);
+    text-align: center;
+    font-family: arial;
+    position: relative;
+    transition:opacity 0.8s, transform 0.2s;
+  
+}
+
+.card:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+    
+}
+
+.hide-pop{
+    font-weight: bold;
+    font-size: 2em;
+    color: transparent;
+    transition: color 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.8s;
+   
+}
+
+.card:hover .hide-pop{
+    color: red;
+    background-color: black;
+    
+}
+
