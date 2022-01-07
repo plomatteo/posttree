@@ -12,7 +12,7 @@ h1 {
 }
 
 
-#NowPl {
+#Pop {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -37,7 +37,7 @@ h1 {
     
 }
 
-.hide-vote{
+.hide-pop{
     font-weight: bold;
     font-size: 2em;
     color: transparent;
@@ -50,7 +50,9 @@ h1 {
    
 }
 
-.card:hover .hide-vote{
+.card:hover .hide-pop{
     color: red;
+    background-color: black;
+    
 }
 

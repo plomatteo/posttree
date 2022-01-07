@@ -65,6 +65,11 @@ h1 {
     opacity: 1;
   }
 
+.card:hover + .hide-vote {
+    visibility: visible;
+    
+}
+
 .overlay {
     position: absolute;
     top: 0;
