@@ -2,54 +2,135 @@ body {
     background-color: #708090;
 }
 
-.main-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
+/* ------------- SECONDARY NAVBAR ------------- */
+
+.secondary-nav {
+  background-color: black;
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrap {
+  display: flex;
+  position: relative;
+  width: 40%;
+}
+
+.secondary-nav i {
+  color: black;
+  position: absolute;
+  top: 42px;
+  left: 12px;
+}
+
+.secondary-nav input {
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 35px;
+  height: 40px;
+  width: 100%;
 }
 
 h1 {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+  margin: 20px auto 50px;
+  width: max-content;
 }
 
-.list {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
     text-align: center;
     font-family: arial;
+    width: 20%;
 
     position: relative;
     transition: opacity 0.8s, transform 0.2s;
-    
+
   }
 
-.card:hover {
-    opacity: 0.6;
+  .card:hover {
+    opacity: 0.4;
     transform: scale(1.05);
-}
+  }
+
+  .card:hover .overlay {
+    opacity: 1;
+  }
 
 .card:hover + .hide-vote {
     visibility: visible;
     
 }
 
-.hide-vote {
-    visibility: hidden;
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+.overlaytext {
     color: black;
+    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-  table, th, td {
-      border: 2px solid black;
-      margin: auto;
+    -ms-transform: translate(-50%, -50%);
   }
+
+  .page-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .page-buttons button {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  /* ------------- FOOTER ------------- */
+
+  footer {
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70%;
+
+    height: 300px;
+  }
+
+  .footer-nav {
+    color: white;
+  }
+
+  footer ul {
+    list-style-type: none;
+  }
+
+  footer p {
+    color: white;
+  }
+
+/* ------------- MEDIA QUERIES ------------- */
+
+@media screen {
+  
+}
