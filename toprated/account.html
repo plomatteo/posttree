@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../src/style.css">
     <link rel="stylesheet" href="./style.css">
     <script type="text/javascript" src="toprated.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
 </head>
 <nav class="navbar">
@@ -49,27 +50,39 @@
 </nav>
 
 <nav class="secondary-nav">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+    <div class="search-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search movies...">
+    </div>
+    
 </nav>
 
 <body>
 
-    <h1>Top Rated</h1>
+    <h1>Welcome!</h1>
 
-    <div class="main-wrapper" id="page2-wrap">
+    <div class="main-wrapper" id="page-wrap">
 
 
     </div>
 
     <span class="page-buttons">
-        <button><a href="./index.html">Previous Page</a></button>
+        <button class="prev-btn" onclick="callPreviousPage()">Previous Page</button>
         <button>Top of the page</button>
-        <button>Next Page</button>
+        <button class="next-btn" onclick="callNextPage()">Next Page</button>
     </span>
 </body>
 
 <footer>
-    <p>Copyright 2021</p>
+    <ul class="footer-nav">
+        <li>Home</li>
+        <li>Top rated</li>
+        <li>Latest</li>
+        <li>Now playing</li>
+        <li>Popular</li>
+        <li>Upcoming</li>
+    </ul>
+    <p>Copyright 2022</p>
 </footer>
 
 </html>

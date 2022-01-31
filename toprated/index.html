@@ -54,36 +54,52 @@
         <i class="fas fa-search"></i>
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search movies...">
     </div>
-    
+    <div class="account">
+        <i class="fas fa-user"></i>
+        <a>Log in</a>
+    </div>
 </nav>
 
 <body>
+    <div class="primary-container">
+        <div class="side-container">
 
-    <h1>Top Rated</h1>
+        </div>
+        <div class="main-container">
+            <h1>Top Rated</h1>
 
-    <div class="main-wrapper" id="page-wrap">
+            <div class="main-wrapper" id="page-wrap">
 
 
+            </div>
+
+
+            <span class="page-buttons">
+                <button class="prev-btn" onclick="callPreviousPage()">Previous Page</button>
+                <button>Top of the page</button>
+                <button class="next-btn" onclick="callNextPage()">Next Page</button>
+            </span>
+        </div>
+        <div class="side-container">
+
+        </div>
     </div>
-
-    <span class="page-buttons">
-
-        <button class="prev-btn" onclick="callPreviousPage()">Previous Page</button>
-        <button>Top of the page</button>
-        <button class="next-btn" onclick="callNextPage()">Next Page</button>
-    </span>
 </body>
 
 <footer>
-    <ul class="footer-nav">
-        <li>Home</li>
-        <li>Top rated</li>
-        <li>Latest</li>
-        <li>Now playing</li>
-        <li>Popular</li>
-        <li>Upcoming</li>
-    </ul>
-    <p>Copyright 2021</p>
+    <div class="footer-content">
+    
+        <ul class="footer-nav">
+            <li>Home</li>
+            <li>Top rated</li>
+            <li>Latest</li>
+            <li>Now playing</li>
+            <li>Popular</li>
+            <li>Upcoming</li>
+        </ul>
+        <p>Copyright 2022</p>
+
+    </div>
 </footer>
 
 </html>
